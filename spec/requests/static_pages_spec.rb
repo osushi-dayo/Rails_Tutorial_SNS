@@ -9,7 +9,7 @@ describe "StaticPages" do ###このdescribeはコメントみたいなもの。�
 
         it "should have the right title" do
             visit '/static_pages/home'
-            expect(page).to have_title("Ruby on Rails Tutorial Sample Coedo | Home")
+            expect(page).to have_title("Ruby on Rails Tutorial Sample Coedo")
         end
     end
 
