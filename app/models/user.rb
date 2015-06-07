@@ -7,4 +7,7 @@ class User < ActiveRecord::Base
     validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
     ###{case_sensitive: false}大文字小文字をくべつしない
     ### "user@example.com"と"USER@EXAMPLE.COM"は同じメールアドレスと判断するってこと
+
+    has_secure_password
+    validates :password, length: { minimum: 6 }
 end
